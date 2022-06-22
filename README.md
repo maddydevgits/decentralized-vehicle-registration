@@ -19,8 +19,9 @@ Decentralized Vehicle Registration is a project on Blockchain and is a dapp whic
 4. Create migration script for Smart Contract :heavy_check_mark:
 5. Launch Ganache :heavy_check_mark:
 6. Migrate the Smart Contract :heavy_check_mark:
-7. Create app script and run server :x:
-8. Create a function to connect with blockchain :x:
+7. Create app script and run server :heavy_check_mark:
+8. Create a function to connect with blockchain :heavy_check_mark:
+9. Send OTP to email upon a server connect :x:
 
 # Execution Process
 1. Install Softwares
