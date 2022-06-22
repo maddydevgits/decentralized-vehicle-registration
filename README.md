@@ -13,8 +13,9 @@ Decentralized Vehicle Registration is a project on Blockchain and is a dapp whic
 2. pip install flask
 
 # Development Process
-1. Init the Repository :x:
-2. Init the Truffle :x:
+1. Init the Repository :heavy_check_mark:
+2. Init the Truffle :heavy_check_mark:
+3. Create a smart contract :x:
 
 # Execution Process
 1. Install Softwares
