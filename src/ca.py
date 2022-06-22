@@ -1,0 +1,1 @@
+vehicleContractAddress='0x79cc0dCa062302eC99f24541D87ee873B326aDBD'
