@@ -15,7 +15,10 @@ Decentralized Vehicle Registration is a project on Blockchain and is a dapp whic
 # Development Process
 1. Init the Repository :heavy_check_mark:
 2. Init the Truffle :heavy_check_mark:
-3. Create a smart contract :x:
+3. Create a smart contract :heavy_check_mark:
+4. Create migration script for Smart Contract :x:
+5. Launch Ganache :x:
+6. Migrate the Smart Contract :x:
 
 # Execution Process
 1. Install Softwares
