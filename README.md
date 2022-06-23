@@ -22,7 +22,14 @@ Decentralized Vehicle Registration is a project on Blockchain and is a dapp whic
 7. Create app script and run server :heavy_check_mark:
 8. Create a function to connect with blockchain :heavy_check_mark:
 9. Send OTP to email upon a server connect :heavy_check_mark:
-10. Create HTML Page for Entering OTP :x:
+10. Create HTML Page for Entering OTP :heavy_check_mark:
+11. Create HTML Page for Registering Vehicle :heavy_check_mark:
+12. API Routes for OTP Validation :heavy_check_mark:
+13. API Routes for Smart Contract Function Call :heavy_check_mark:
+14. Create HTML Page for Listing Vehicle Details :heavy_check_mark:
+15. API Routes for Smart Contract Function Call :heavy_check_mark:
+16. Scripts for Logout and final test :heavy_check_mark:
+17. Removing Access Key and Secret Key :heavy_check_mark:
 
 # Execution Process
 1. Install Softwares

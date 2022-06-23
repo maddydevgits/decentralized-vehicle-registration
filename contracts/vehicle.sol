@@ -28,6 +28,8 @@ contract vehicle {
 
     require(!regList[_vnumber]);
 
+    regList[_vnumber]=true;
+
     vOwners.push(_vowner);
     vTypes.push(_vtype);
     vNumbers.push(_vnumber);

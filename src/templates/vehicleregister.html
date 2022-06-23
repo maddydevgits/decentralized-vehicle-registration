@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decentralized Vehicle Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Decentralized Vehicle Registration</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/vehicleRegister">Vehicle Register</a></li>
+      <li><a href="/listVehicles">Vehicles List</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Vehicle Registration form</h2> <br/><br/>
+    <form action="/vehicleRegisterForm" method="POST">
+    <div class="form-group">
+      <label for="walletaddr">Enter your Wallet Address:</label>
+      <input type="text" class="form-control" id="walletaddr" placeholder="Enter Wallet Address" name="walletaddr">
+    </div>
+    <div class="form-group">
+        <label for="vehicletype">Enter your Vehicle Type:</label>
+        <input type="text" class="form-control" id="vehicletype" placeholder="Enter Vehicle Type" name="vehicletype">
+    </div>
+    <div class="form-group">
+        <label for="vehicleno">Enter your Vehicle Number:</label>
+        <input type="text" class="form-control" id="vehicleno" placeholder="Enter Vehicle Number" name="vehicleno">
+    </div>
+    <div class="form-group">
+        <label for="owneremail">Enter Owner Email:</label>
+        <input type="text" class="form-control" id="owneremail" placeholder="Enter Owner Email" name="owneremail">
+    </div>
+    <div class="form-group">
+        <label for="owneraddr">Enter your home address:</label>
+        <input type="text" class="form-control" id="vehicletype" placeholder="Enter Home Address" name="owneraddr">
+    </div>
+    <div class="form-group">
+        <label for="chassisno">Enter your Chassis No:</label>
+        <input type="text" class="form-control" id="chassisno" placeholder="Enter Chassis No" name="chassisno">
+    </div>
+    <div class="form-group">
+        <label for="ownername">Enter your name:</label>
+        <input type="text" class="form-control" id="ownername" placeholder="Enter Owner Name" name="ownername">
+    </div>
+    <button type="submit" class="btn btn-primary btn-login" id="login">Register Vehicle</button>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>

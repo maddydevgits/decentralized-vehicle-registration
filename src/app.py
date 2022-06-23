@@ -43,7 +43,66 @@ def otpPage():
             time.sleep(10)
     return render_template('otp.html')
 
+@app.route('/otpForm',methods=['POST','GET'])
+def otpForm():
+    global otp_created
+    otp=request.form['otp']
+    print(otp,otp_created)
+    if int(otp)==otp_created:
+        return redirect('/vehicleRegister')
+    return redirect('/')
 
+@app.route('/vehicleRegister')
+def vehicleRegister():
+    return render_template('vehicleregister.html')
+
+@app.route('/vehicleRegisterForm',methods=['POST','GET'])
+def vehicleRegisterForm():
+    walletaddr=request.form['walletaddr']
+    vehicletype=request.form['vehicletype']
+    vehicleno=request.form['vehicleno']
+    owneremail=request.form['owneremail']
+    owneraddr=request.form['owneraddr']
+    chassisno=request.form['chassisno']
+    ownername=request.form['ownername']
+    print(walletaddr,vehicletype,vehicleno,owneremail,owneraddr,chassisno,ownername)
+    contract,web3=connect_with_blockchain(0)
+    tx_hash=contract.functions.addVehicle(walletaddr,vehicletype,vehicleno,owneremail,owneraddr,chassisno,ownername).transact()
+    web3.eth.waitForTransactionReceipt(tx_hash)
+    verifyIdentity(owneremail)
+    while True:
+        try:
+            a=sendmessage('Vehicle Registration',walletaddr,vehicletype,vehicleno,owneremail,owneraddr,chassisno,ownername,owneremail)
+            if(a):
+                break
+            else:
+                continue
+        except:
+            time.sleep(10)
+    
+    return redirect('/listVehicles')
+
+@app.route('/listVehicles')
+def listVehicles():
+    data=[]
+    contract,web3=connect_with_blockchain(0)
+    vOwners,vTypes,vNumbers,vEmails,vAddresses,vChassisnos,vOwnernames=contract.functions.viewVehicles().call()
+    for i in range(len(vOwners)):
+        dummy=[]
+        dummy.append(vOwners[i])
+        dummy.append(vTypes[i])
+        dummy.append(vNumbers[i])
+        dummy.append(vEmails[i])
+        dummy.append(vAddresses[i])
+        dummy.append(vChassisnos[i])
+        dummy.append(vOwnernames[i])
+        data.append(dummy)
+    l=len(data)
+    return render_template('listvehicles.html',dashboard_data=data,len=l)
+
+@app.route('/logout')
+def logout():
+    return render_template('home.html')
 
 if __name__=="__main__":
     app.run(debug=True)
